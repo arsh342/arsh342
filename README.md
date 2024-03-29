@@ -1,5 +1,6 @@
-- 👀 I’m interested in: Programming
-- 🌱 I’m currently learning: Python
+- 👀 I’m interested in: Web development
+- 🌱 I’m currently learning: Python and C
+- 
 
 
 
