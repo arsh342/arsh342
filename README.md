@@ -1,8 +1,5 @@
-<div align="center">
-  <img src="/placeholder.svg?height=200&width=800" alt="Arsh Singh's Coding Journey" />
-</div>
 
-# 👨‍💻 Hi, Arsh here🧙‍♂️
+# 👨‍💻 Hi, Arsh here
 
 Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffeine into code and dreams into web applications. 🚀
 
@@ -37,7 +34,7 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=arsh342&theme=radical" alt="Arsh's GitHub Streak" />
 </div>
 
-## 🌐 Connect with the Wizard
+## 🌐 Connect 
 
 <div align="center">
   <a href="https://www.linkedin.com/in/arsh-singh-615903330/">
@@ -48,22 +45,6 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
   </a>
 </div>
 
-## 🎨 Code Art Gallery
-
-Here's a taste of my coding style:
-
-```javascript
-function unleashCreativity(coffee) {
-  while (coffee.isHot()) {
-    const idea = generateBrilliantIdea();
-    const code = transformIdeaToCode(idea);
-    deployToProduction(code);
-    coffee.sip();
-  }
-  return "Time for a refill!";
-}
-```
-
 ## 🌱 Growing Strong
 
 My top languages are constantly evolving:
@@ -72,19 +53,8 @@ My top languages are constantly evolving:
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsh342&layout=compact&theme=radical" alt="Top Languages" />
 </div>
 
-## 🎵 Coding Soundtrack
-
-When I'm in the zone, you'll catch me listening to:
-- 🎸 Classic Rock for debugging
-- 🎹 Lo-fi beats for late-night coding sessions
-- 🎧 EDM for high-energy feature implementations
-
----
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=arsh342&color=blueviolet&style=flat-square&label=Profile+Visitors" alt="Profile Visitors" />
 </div>
 
-<div align="center">
-  <em>Remember: Every great wizard was once a student. Keep coding, keep learning! 🧙‍♂️✨</em>
-</div>
