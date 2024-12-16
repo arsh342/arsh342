@@ -9,7 +9,7 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
 - 🧠 Unraveling the mysteries of Data Structures & Algorithms in JAVA
 - 🌐 Exploring the vast universe of web technologies
 
-## 🛠️ My Spellbook (Tech Stack)
+## 🛠️ My Tech Stack
 
 <div align="center">
 
@@ -19,19 +19,6 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
 | ![Next.js](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) | ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) | ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) |
 | ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) | ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) | | ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) |
 
-</div>
-
-## 🏆 Achievements Unlocked
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=arsh342&theme=darkhub&no-frame=true&row=1&column=6" alt="Arsh's Trophies" />
-</div>
-
-## 📊 Quest Log (GitHub Stats)
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=arsh342&show_icons=true&theme=radical" alt="Arsh's GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=arsh342&theme=radical" alt="Arsh's GitHub Streak" />
 </div>
 
 ## 🌐 Connect 
