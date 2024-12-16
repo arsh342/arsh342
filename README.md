@@ -1,7 +1,14 @@
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00F7EE&center=true&vCenter=true&width=435&lines=Hi%2C+I'm+Arsh+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;Full+Stack+Developer;MERN+Enthusiast;Code+Alchemist" alt="Typing SVG" />
+</div>
 
-# 👨‍💻 Hi, Arsh here
+# 🚀 Welcome to My Digital Realm!
 
-Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffeine into code and dreams into web applications. 🚀
+I'm Arsh, a passionate developer transforming caffeine into code and dreams into web applications. 
+
+<div align="center">
+  <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="500">
+</div>
 
 ## 🌟 Current Quests
 
@@ -9,7 +16,7 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
 - 🧠 Unraveling the mysteries of Data Structures & Algorithms in JAVA
 - 🌐 Exploring the vast universe of web technologies
 
-## 🛠️ My Tech Stack
+## 🛠️ My Tech Arsenal
 
 <div align="center">
 
@@ -21,7 +28,7 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
 
 </div>
 
-## 🌐 Connect 
+## 🌐 Let's Connect and Create Magic!
 
 <div align="center">
   <a href="https://www.linkedin.com/in/arsh-singh-615903330/">
@@ -32,16 +39,29 @@ Welcome to my digital realm! I'm Arsh, a passionate developer transforming caffe
   </a>
 </div>
 
-## 🌱 Growing Strong
+## 📊 GitHub Stats
 
-My top languages are constantly evolving:
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=arsh342&show_icons=true&theme=radical" alt="GitHub Stats" />
+</div>
+
+## 🌱 Growing Strong: My Top Languages
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsh342&layout=compact&theme=radical" alt="Top Languages" />
 </div>
 
+## 🏆 GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=arsh342&theme=darkhub&no-frame=true&margin-w=15" alt="GitHub Trophies" />
+</div>
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=arsh342&color=blueviolet&style=flat-square&label=Profile+Visitors" alt="Profile Visitors" />
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/arsh342/arsh342/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </div>
 
