@@ -1,18 +1,10 @@
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=00F7EE&center=true&vCenter=true&width=435&lines=Hi%2C+I'm+Arsh+%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB;Full+Stack+Developer;MERN+Enthusiast" alt="Typing SVG" />
-</div>
-
-# 🚀 Welcome!
-
-I'm Arsh, a passionate developer transforming caffeine into code and dreams into web applications. 
-
-## 🌟 Current Quests
+## 🌟 Currently
 
 - 🏗️ Architecting web wonders with the MERN stack
 - 🧠 Unraveling the mysteries of Data Structures & Algorithms in JAVA
 - 🌐 Exploring the vast universe of web technologies
 
-## 🛠️ My Tech Arsenal
+## 🛠️ Tech Arsenal
 
 <div align="center">
 
@@ -24,7 +16,7 @@ I'm Arsh, a passionate developer transforming caffeine into code and dreams into
 
 </div>
 
-## 🌐 Let's Connect and Create Magic!
+## 🌐 Connect 
 
 <div align="center">
   <a href="https://www.linkedin.com/in/arsh-singh-615903330/">
@@ -35,7 +27,7 @@ I'm Arsh, a passionate developer transforming caffeine into code and dreams into
   </a>
 </div>
 
-## 🌱 Growing Strong: My Top Languages
+## 🌱 Top Languages
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsh342&layout=compact&theme=radical" alt="Top Languages" />
