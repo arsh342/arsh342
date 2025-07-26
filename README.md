@@ -46,14 +46,6 @@
 
 ---
 
-## 🌱 Top Languages
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=arsh342&layout=compact&theme=radical" alt="Top Languages" />
-</div>
-
----
-
 ## 🌐 Connect 
 
 <div align="center">
