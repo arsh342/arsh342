@@ -1,4 +1,4 @@
-# 👋 Hey there! I'm Arsh
+# 👋 Hey there!
 
 ## 🌟 Currently
 - 🌐 Exploring the ever-evolving universe of **Web Technologies**
