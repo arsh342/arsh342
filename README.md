@@ -4,7 +4,7 @@
 
 **Backend & Full-Stack Engineer · AI/LLM Systems · Cybersecurity**
 
-B.Tech/M.Tech Computer Science · Graduating 2027
+B.Tech Computer Science · Graduating 2027
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-arsh.engineer-black?style=for-the-badge&logo=vercel&logoColor=white)](https://www.arsh.engineer/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arsh342)
