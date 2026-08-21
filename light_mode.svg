@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
 <rect width="1100" height="650" rx="18" fill="#f6f8fa"/>
 <g font-family="SFMono-Regular,Consolas,Liberation Mono,monospace" font-size="18">
-  <text x="55" y="58" fill="#57606a">{USERNAME}</text>
+  <text x="55" y="58" fill="#57606a">arsh342</text>
   <text x="180" y="58" fill="#afb8c1">────────────────────────────────────────────────────────────────────────────────────────</text>
 
   <text x="55" y="95" fill="#bc4c00">Education:</text>
@@ -39,21 +39,21 @@
   <text x="55" y="481" fill="#57606a">─ GitHub Stats ─────────────────────────────────────────────────────────────────────────</text>
 
   <text x="55" y="518" fill="#bc4c00">Repos:</text>
-  <text x="145" y="518" fill="#0969da">{REPOS}</text>
+  <text x="145" y="518" fill="#0969da">24</text>
   <text x="285" y="518" fill="#bc4c00">Contributed:</text>
-  <text x="425" y="518" fill="#0969da">{CONTRIBUTED}</text>
+  <text x="425" y="518" fill="#0969da">19</text>
   <text x="565" y="518" fill="#bc4c00">Stars:</text>
-  <text x="650" y="518" fill="#0969da">{STARS}</text>
+  <text x="650" y="518" fill="#0969da">615</text>
   <text x="790" y="518" fill="#bc4c00">Followers:</text>
-  <text x="925" y="518" fill="#0969da">{FOLLOWERS}</text>
+  <text x="925" y="518" fill="#0969da">14</text>
 
   <text x="55" y="554" fill="#bc4c00">Commits:</text>
-  <text x="145" y="554" fill="#0969da">{COMMITS}</text>
+  <text x="145" y="554" fill="#0969da">369</text>
   <text x="285" y="554" fill="#bc4c00">Contributions:</text>
-  <text x="425" y="554" fill="#0969da">{CONTRIBUTIONS}</text>
+  <text x="425" y="554" fill="#0969da">452</text>
 
   <text x="55" y="590" fill="#bc4c00">Lines Changed:</text>
-  <text x="230" y="590" fill="#0969da">{LOC}</text>
-  <text x="55" y="626" fill="#57606a">Account age: {UPTIME}</text>
+  <text x="230" y="590" fill="#0969da">2,968,760</text>
+  <text x="55" y="626" fill="#57606a">Account age: 3 years, 2 months, 19 days</text>
 </g>
 </svg>
