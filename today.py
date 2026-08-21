@@ -190,7 +190,7 @@ def main():
     for theme in ("light", "dark"):
         template = open(f"assets/{theme}_mode.svg", encoding="utf-8").read()
         for key, value in values.items():
-            template = template.replace(f"{{{{{key}}}}}", value)
+            template = template.replace(f"{{{key}}}", value)
         open(f"{theme}_mode.svg", "w", encoding="utf-8").write(template)
 
 
