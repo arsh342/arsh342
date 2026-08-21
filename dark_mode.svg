@@ -21,7 +21,7 @@
     <text x="42" y="244" class="muted">       │  build · ship · learn │</text>
     <text x="42" y="264" class="muted">       └─────────────────────┘</text>
 
-    <text x="430" y="42" class="head fg">{USERNAME} <tspan class="muted">────────────────────────────────────────</tspan></text>
+    <text x="430" y="42" class="head fg">arsh342 <tspan class="muted">────────────────────────────────────────</tspan></text>
     <text x="430" y="70" class="label">Education:</text>
     <text x="595" y="70" class="muted">..........</text>
     <text x="660" y="70" class="value">B.Tech Computer Science · 2027</text>
@@ -30,7 +30,7 @@
     <text x="730" y="94" class="value">Backend / Full-Stack Engineer</text>
     <text x="430" y="118" class="label">Uptime:</text>
     <text x="595" y="118" class="muted">.................</text>
-    <text x="715" y="118" class="value">{UPTIME}</text>
+    <text x="715" y="118" class="value">3 years, 2 months, 19 days</text>
 
     <text x="430" y="182" class="label">Languages:</text>
     <text x="595" y="182" class="muted">..............</text>
@@ -64,18 +64,18 @@
 
     <text x="430" y="462" class="fg">- GitHub Stats <tspan class="muted">──────────────────────────────────</tspan></text>
     <text x="430" y="490" class="label">Repos:</text>
-    <text x="535" y="490" class="green">{REPOS}</text>
+    <text x="535" y="490" class="green">24</text>
     <text x="600" y="490" class="muted">| Contributed:</text>
-    <text x="730" y="490" class="green">{CONTRIBUTED}</text>
+    <text x="730" y="490" class="green">19</text>
     <text x="825" y="490" class="muted">| Stars:</text>
-    <text x="905" y="490" class="green">{STARS}</text>
+    <text x="905" y="490" class="green">615</text>
     <text x="430" y="514" class="label">Commits:</text>
-    <text x="535" y="514" class="green">{COMMITS}</text>
+    <text x="535" y="514" class="green">368</text>
     <text x="600" y="514" class="muted">| Contributions:</text>
-    <text x="760" y="514" class="green">{CONTRIBUTIONS}</text>
+    <text x="760" y="514" class="green">451</text>
     <text x="430" y="538" class="label">Followers:</text>
-    <text x="535" y="538" class="green">{FOLLOWERS}</text>
+    <text x="535" y="538" class="green">14</text>
     <text x="600" y="538" class="muted">| Lines of Code:</text>
-    <text x="760" y="538" class="green">{LOC}</text>
+    <text x="760" y="538" class="green">2,968,903</text>
   </g>
 </svg>
