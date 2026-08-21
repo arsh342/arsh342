@@ -49,11 +49,6 @@
 
   <text x="55" y="554" fill="#f0883e">Commits:</text>
   <text x="145" y="554" fill="#58a6ff">{COMMITS}</text>
-  <text x="285" y="554" fill="#f0883e">Contributions:</text>
-  <text x="425" y="554" fill="#58a6ff">{CONTRIBUTIONS}</text>
 
-  <text x="55" y="590" fill="#f0883e">Lines Changed:</text>
-  <text x="230" y="590" fill="#58a6ff">{LOC}</text>
-  <text x="55" y="626" fill="#8b949e">Account age: {UPTIME}</text>
 </g>
 </svg>

@@ -49,11 +49,8 @@
 
   <text x="55" y="554" fill="#bc4c00">Commits:</text>
   <text x="145" y="554" fill="#0969da">369</text>
-  <text x="285" y="554" fill="#bc4c00">Contributions:</text>
   <text x="425" y="554" fill="#0969da">452</text>
 
-  <text x="55" y="590" fill="#bc4c00">Lines Changed:</text>
   <text x="230" y="590" fill="#0969da">2,968,760</text>
-  <text x="55" y="626" fill="#57606a">Account age: 3 years, 2 months, 19 days</text>
 </g>
 </svg>

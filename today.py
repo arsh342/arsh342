@@ -22,7 +22,6 @@ query($login: String!) {
     contributionsCollection {
       totalCommitContributions
       totalRepositoriesWithContributedCommits
-      contributionCalendar { totalContributions }
     }
   }
 }
@@ -85,61 +84,6 @@ def account_age(created_at):
 def fmt(value):
     return f"{value:,}"
 
-def repository_loc(owner, repo):
-    query = """
-    query($owner: String!, $repo: String!, $cursor: String) {
-      repository(owner: $owner, name: $repo) {
-        defaultBranchRef {
-          target {
-            ... on Commit {
-              history(first: 100, after: $cursor) {
-                edges {
-                  node {
-                    additions
-                    deletions
-                    author { user { login } }
-                  }
-                }
-                pageInfo { hasNextPage endCursor }
-              }
-            }
-          }
-        }
-      }
-    }
-    """
-    additions = 0
-    deletions = 0
-    cursor = None
-
-    while True:
-        data = github_graphql(query, {
-            "owner": owner,
-            "repo": repo,
-            "cursor": cursor,
-        })
-        repository = data.get("repository")
-        if not repository or not repository.get("defaultBranchRef"):
-            break
-
-        target = repository["defaultBranchRef"].get("target")
-        history = target.get("history") if target else None
-        if not history:
-            break
-
-        for edge in history["edges"]:
-            commit = edge["node"]
-            author = (commit.get("author") or {}).get("user")
-            if author and author.get("login", "").lower() == USERNAME.lower():
-                additions += commit.get("additions") or 0
-                deletions += commit.get("deletions") or 0
-
-        if not history["pageInfo"]["hasNextPage"]:
-            break
-        cursor = history["pageInfo"]["endCursor"]
-
-    return additions - deletions
-
 def main():
     data = github_graphql()
     user = data["user"]
@@ -148,23 +92,13 @@ def main():
     stars = sum(repo["stargazerCount"] for repo in repos)
     contributions = user["contributionsCollection"]
 
-    # Keep the profile fast enough for GitHub Actions while still matching
-    # the reference profile's "lines changed" concept.
-    loc = 0
-    for repo in repos:
-        owner, name = repo["nameWithOwner"].split("/", 1)
-        loc += repository_loc(owner, name)
-
     values = {
         "USERNAME": user["login"],
-        "UPTIME": account_age(user["createdAt"]),
         "REPOS": fmt(user["repositories"]["totalCount"]),
         "CONTRIBUTED": fmt(contributions["totalRepositoriesWithContributedCommits"]),
         "STARS": fmt(stars),
         "COMMITS": fmt(contributions["totalCommitContributions"]),
-        "CONTRIBUTIONS": fmt(contributions["contributionCalendar"]["totalContributions"]),
         "FOLLOWERS": fmt(user["followers"]["totalCount"]),
-        "LOC": fmt(loc),
     }
 
     for theme in ("light", "dark"):
