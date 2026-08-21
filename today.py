@@ -1,21 +1,20 @@
 import json
 import os
 import urllib.request
-from datetime import datetime, timezone
 
 USERNAME = os.environ.get("USER_NAME", "arsh342")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
-GRAPHQL = """
+
+QUERY = """
 query($login: String!) {
   user(login: $login) {
-    name
     login
-    createdAt
-    followers { totalCount }
+    followers {
+      totalCount
+    }
     repositories(ownerAffiliations: OWNER, first: 100, privacy: PUBLIC) {
       totalCount
       nodes {
-        nameWithOwner
         stargazerCount
       }
     }
@@ -27,11 +26,14 @@ query($login: String!) {
 }
 """
 
-def github_graphql(query=GRAPHQL, variables=None):
+
+def github_graphql():
     payload = json.dumps({
-        "query": query,
-        "variables": variables or {"login": USERNAME},
-    }).encode()
+        "query": QUERY,
+        "variables": {
+            "login": USERNAME
+        }
+    }).encode("utf-8")
 
     request = urllib.request.Request(
         "https://api.github.com/graphql",
@@ -40,9 +42,9 @@ def github_graphql(query=GRAPHQL, variables=None):
             "Authorization": f"Bearer {TOKEN}",
             "Accept": "application/vnd.github+json",
             "Content-Type": "application/json",
-            "User-Agent": "arsh342-profile-readme",
+            "User-Agent": "arsh342-profile"
         },
-        method="POST",
+        method="POST"
     )
 
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -50,62 +52,67 @@ def github_graphql(query=GRAPHQL, variables=None):
 
     if "errors" in result:
         messages = "; ".join(
-            error.get("message", "Unknown GraphQL error")
+            error.get("message", "Unknown GitHub GraphQL error")
             for error in result["errors"]
         )
-        raise RuntimeError(f"GitHub GraphQL error: {messages}")
+        raise RuntimeError(messages)
 
-    return result["data"]
+    return result["data"]["user"]
 
-def account_age(created_at):
-    created = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
-    now = datetime.now(timezone.utc)
-    years = now.year - created.year
-    months = now.month - created.month
-    days = now.day - created.day
-
-    if days < 0:
-        months -= 1
-        previous_month = now.month - 1 or 12
-        previous_year = now.year if now.month > 1 else now.year - 1
-        if previous_month in (1, 3, 5, 7, 8, 10, 12):
-            days += 31
-        elif previous_month in (4, 6, 9, 11):
-            days += 30
-        else:
-            days += 29 if previous_year % 4 == 0 else 28
-
-    if months < 0:
-        years -= 1
-        months += 12
-
-    return f"{years} years, {months} months, {days} days"
 
 def fmt(value):
     return f"{value:,}"
 
-def main():
-    data = github_graphql()
-    user = data["user"]
-    repos = user["repositories"]["nodes"]
 
-    stars = sum(repo["stargazerCount"] for repo in repos)
+def main():
+    user = github_graphql()
+
+    repositories = user["repositories"]
+
+    repos = repositories["totalCount"]
+
+    stars = sum(
+        repo["stargazerCount"]
+        for repo in repositories["nodes"]
+    )
+
     contributions = user["contributionsCollection"]
+
+    contributed = contributions[
+        "totalRepositoriesWithContributedCommits"
+    ]
+
+    commits = contributions[
+        "totalCommitContributions"
+    ]
+
+    followers = user["followers"]["totalCount"]
 
     values = {
         "USERNAME": user["login"],
-        "REPOS": fmt(user["repositories"]["totalCount"]),
-        "CONTRIBUTED": fmt(contributions["totalRepositoriesWithContributedCommits"]),
+        "REPOS": fmt(repos),
+        "CONTRIBUTED": fmt(contributed),
         "STARS": fmt(stars),
-        "COMMITS": fmt(contributions["totalCommitContributions"]),
-        "FOLLOWERS": fmt(user["followers"]["totalCount"]),
+        "FOLLOWERS": fmt(followers),
+        "COMMITS": fmt(commits),
     }
 
     for theme in ("light", "dark"):
-        template = open(f"assets/{theme}_mode.svg", encoding="utf-8").read()
+        template_path = f"assets/{theme}_mode.svg"
+        output_path = f"{theme}_mode.svg"
+
+        with open(template_path, "r", encoding="utf-8") as file:
+            svg = file.read()
+
         for key, value in values.items():
-            template = template.replace(f"{{{key}}}", value)
-        open(f"{theme}_mode.svg", "w", encoding="utf-8").write(template)
+            svg = svg.replace(
+                "{" + key + "}",
+                value
+            )
+
+        with open(output_path, "w", encoding="utf-8") as file:
+            file.write(svg)
+
 
 if __name__ == "__main__":
     main()
