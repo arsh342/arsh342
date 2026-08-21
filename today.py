@@ -5,7 +5,6 @@ from datetime import datetime, timezone
 
 USERNAME = os.environ.get("USER_NAME", "arsh342")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
-
 GRAPHQL = """
 query($login: String!) {
   user(login: $login) {
@@ -17,20 +16,11 @@ query($login: String!) {
       totalCount
       nodes {
         nameWithOwner
-        name
         stargazerCount
-        defaultBranchRef {
-          target {
-            ... on Commit {
-              history(first: 1) { totalCount }
-            }
-          }
-        }
       }
     }
     contributionsCollection {
       totalCommitContributions
-      restrictedContributionsCount
       totalRepositoriesWithContributedCommits
       contributionCalendar { totalContributions }
     }
@@ -60,16 +50,17 @@ def github_graphql(query=GRAPHQL, variables=None):
         result = json.load(response)
 
     if "errors" in result:
-        messages = "; ".join(error.get("message", "Unknown GraphQL error") for error in result["errors"])
+        messages = "; ".join(
+            error.get("message", "Unknown GraphQL error")
+            for error in result["errors"]
+        )
         raise RuntimeError(f"GitHub GraphQL error: {messages}")
 
     return result["data"]
 
-
-def years_months_days(created_at):
+def account_age(created_at):
     created = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
     now = datetime.now(timezone.utc)
-
     years = now.year - created.year
     months = now.month - created.month
     days = now.day - created.day
@@ -91,10 +82,8 @@ def years_months_days(created_at):
 
     return f"{years} years, {months} months, {days} days"
 
-
 def fmt(value):
     return f"{value:,}"
-
 
 def repository_loc(owner, repo):
     query = """
@@ -119,16 +108,16 @@ def repository_loc(owner, repo):
       }
     }
     """
-
     additions = 0
     deletions = 0
     cursor = None
 
     while True:
-        data = github_graphql(
-            query,
-            {"owner": owner, "repo": repo, "cursor": cursor},
-        )
+        data = github_graphql(query, {
+            "owner": owner,
+            "repo": repo,
+            "cursor": cursor,
+        })
         repository = data.get("repository")
         if not repository or not repository.get("defaultBranchRef"):
             break
@@ -140,10 +129,10 @@ def repository_loc(owner, repo):
 
         for edge in history["edges"]:
             commit = edge["node"]
-            author = commit.get("author", {}).get("user")
+            author = (commit.get("author") or {}).get("user")
             if author and author.get("login", "").lower() == USERNAME.lower():
-                additions += commit["additions"] or 0
-                deletions += commit["deletions"] or 0
+                additions += commit.get("additions") or 0
+                deletions += commit.get("deletions") or 0
 
         if not history["pageInfo"]["hasNextPage"]:
             break
@@ -151,24 +140,16 @@ def repository_loc(owner, repo):
 
     return additions - deletions
 
-
 def main():
     data = github_graphql()
     user = data["user"]
     repos = user["repositories"]["nodes"]
 
     stars = sum(repo["stargazerCount"] for repo in repos)
-    repos_owned = user["repositories"]["totalCount"]
+    contributions = user["contributionsCollection"]
 
-    contribution_data = user["contributionsCollection"]
-    commits = contribution_data["totalCommitContributions"]
-    contributions = contribution_data["contributionCalendar"]["totalContributions"]
-    contributed_repos = contribution_data["totalRepositoriesWithContributedCommits"]
-    followers = user["followers"]["totalCount"]
-    uptime = years_months_days(user["createdAt"])
-
-    # Net lines changed in commits authored by the profile owner.
-    # This mirrors the reference project's LOC concept.
+    # Keep the profile fast enough for GitHub Actions while still matching
+    # the reference profile's "lines changed" concept.
     loc = 0
     for repo in repos:
         owner, name = repo["nameWithOwner"].split("/", 1)
@@ -176,14 +157,13 @@ def main():
 
     values = {
         "USERNAME": user["login"],
-        "DISPLAY_NAME": user["name"] or user["login"],
-        "UPTIME": uptime,
-        "REPOS": fmt(repos_owned),
-        "CONTRIBUTED": fmt(contributed_repos),
+        "UPTIME": account_age(user["createdAt"]),
+        "REPOS": fmt(user["repositories"]["totalCount"]),
+        "CONTRIBUTED": fmt(contributions["totalRepositoriesWithContributedCommits"]),
         "STARS": fmt(stars),
-        "COMMITS": fmt(commits),
-        "CONTRIBUTIONS": fmt(contributions),
-        "FOLLOWERS": fmt(followers),
+        "COMMITS": fmt(contributions["totalCommitContributions"]),
+        "CONTRIBUTIONS": fmt(contributions["contributionCalendar"]["totalContributions"]),
+        "FOLLOWERS": fmt(user["followers"]["totalCount"]),
         "LOC": fmt(loc),
     }
 
@@ -192,7 +172,6 @@ def main():
         for key, value in values.items():
             template = template.replace(f"{{{key}}}", value)
         open(f"{theme}_mode.svg", "w", encoding="utf-8").write(template)
-
 
 if __name__ == "__main__":
     main()

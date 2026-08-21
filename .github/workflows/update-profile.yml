@@ -1,9 +1,9 @@
 name: Update GitHub Profile
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "17 0 * * *"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: "3.13"
 
       - name: Generate profile
         env:
@@ -27,7 +27,7 @@ jobs:
           USER_NAME: arsh342
         run: python today.py
 
-      - name: Commit changes
+      - name: Commit generated SVGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

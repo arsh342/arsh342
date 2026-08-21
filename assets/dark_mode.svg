@@ -1,81 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570">
-  <rect width="1000" height="570" rx="18" fill="#161b22"/>
-  <style>
-    .t { font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 17px; }
-    .head { font-size: 18px; font-weight: 600; }
-    .label { fill: #ffa657; }
-    .value { fill: #9ecbff; }
-    .muted { fill: #6e7681; }
-    .fg { fill: #e6edf3; }
-    .green { fill: #3fb950; }
-  </style>
-  <g class="t">
-    <text x="42" y="44" class="fg">              _</text>
-    <text x="42" y="64" class="fg">   __ _ _ __ | |__</text>
-    <text x="42" y="84" class="fg">  / _` | '_ \| '_ \</text>
-    <text x="42" y="104" class="fg"> | (_| | |_) | | | |</text>
-    <text x="42" y="124" class="fg">  \__,_| .__/|_| |_|</text>
-    <text x="42" y="144" class="fg">       |_|</text>
-    <text x="42" y="188" class="muted">       backend / ai / security</text>
-    <text x="42" y="224" class="muted">       ┌─────────────────────┐</text>
-    <text x="42" y="244" class="muted">       │  build · ship · learn │</text>
-    <text x="42" y="264" class="muted">       └─────────────────────┘</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+<rect width="1100" height="650" rx="18" fill="#161b22"/>
+<g font-family="SFMono-Regular,Consolas,Liberation Mono,monospace" font-size="18">
+  <text x="55" y="58" fill="#8b949e">{USERNAME}</text>
+  <text x="180" y="58" fill="#484f58">────────────────────────────────────────────────────────────────────────────────────────</text>
 
-    <text x="430" y="42" class="head fg">{USERNAME} <tspan class="muted">────────────────────────────────────────</tspan></text>
-    <text x="430" y="70" class="label">Education:</text>
-    <text x="595" y="70" class="muted">..........</text>
-    <text x="660" y="70" class="value">B.Tech Computer Science · 2027</text>
-    <text x="430" y="94" class="label">Role:</text>
-    <text x="595" y="94" class="muted">................</text>
-    <text x="730" y="94" class="value">Backend / Full-Stack Engineer</text>
-    <text x="430" y="118" class="label">Uptime:</text>
-    <text x="595" y="118" class="muted">.................</text>
-    <text x="715" y="118" class="value">{UPTIME}</text>
+  <text x="55" y="95" fill="#f0883e">Education:</text>
+  <text x="230" y="95" fill="#c9d1d9">B.Tech Computer Science · 2027</text>
 
-    <text x="430" y="182" class="label">Languages:</text>
-    <text x="595" y="182" class="muted">..............</text>
-    <text x="690" y="182" class="value">Java, Python, TypeScript, JavaScript</text>
-    <text x="430" y="206" class="label">Backend:</text>
-    <text x="595" y="206" class="muted">................</text>
-    <text x="730" y="206" class="value">Spring Boot, Node.js, FastAPI, REST</text>
-    <text x="430" y="230" class="label">AI:</text>
-    <text x="595" y="230" class="muted">........................</text>
-    <text x="725" y="230" class="value">LLMs, RAG, Agents, MCP</text>
-    <text x="430" y="254" class="label">Security:</text>
-    <text x="595" y="254" class="muted">.................</text>
-    <text x="715" y="254" class="value">Cybersecurity, DevSecOps</text>
-    <text x="430" y="278" class="label">Databases:</text>
-    <text x="595" y="278" class="muted">..............</text>
-    <text x="690" y="278" class="value">PostgreSQL, MongoDB, MySQL, Redis</text>
+  <text x="55" y="127" fill="#f0883e">Role:</text>
+  <text x="230" y="127" fill="#c9d1d9">Backend / Full-Stack Engineer</text>
 
-    <text x="430" y="322" class="fg">- Contact <tspan class="muted">──────────────────────────────────────</tspan></text>
-    <text x="430" y="350" class="label">Portfolio:</text>
-    <text x="595" y="350" class="muted">................</text>
-    <text x="730" y="350" class="value">arsh.engineer</text>
-    <text x="430" y="374" class="label">Email:</text>
-    <text x="595" y="374" class="muted">....................</text>
-    <text x="730" y="374" class="value">arshth134@gmail.com</text>
-    <text x="430" y="398" class="label">LinkedIn:</text>
-    <text x="595" y="398" class="muted">.................</text>
-    <text x="760" y="398" class="value">arsh342</text>
-    <text x="430" y="422" class="label">GitHub:</text>
-    <text x="595" y="422" class="muted">...................</text>
-    <text x="760" y="422" class="value">arsh342</text>
+  <text x="55" y="159" fill="#f0883e">Focus:</text>
+  <text x="230" y="159" fill="#c9d1d9">AI / LLM Systems · Cybersecurity</text>
 
-    <text x="430" y="462" class="fg">- GitHub Stats <tspan class="muted">──────────────────────────────────</tspan></text>
-    <text x="430" y="490" class="label">Repos:</text>
-    <text x="535" y="490" class="green">{REPOS}</text>
-    <text x="600" y="490" class="muted">| Contributed:</text>
-    <text x="730" y="490" class="green">{CONTRIBUTED}</text>
-    <text x="825" y="490" class="muted">| Stars:</text>
-    <text x="905" y="490" class="green">{STARS}</text>
-    <text x="430" y="514" class="label">Commits:</text>
-    <text x="535" y="514" class="green">{COMMITS}</text>
-    <text x="600" y="514" class="muted">| Contributions:</text>
-    <text x="760" y="514" class="green">{CONTRIBUTIONS}</text>
-    <text x="430" y="538" class="label">Followers:</text>
-    <text x="535" y="538" class="green">{FOLLOWERS}</text>
-    <text x="600" y="538" class="muted">| Lines of Code:</text>
-    <text x="760" y="538" class="green">{LOC}</text>
-  </g>
+  <text x="55" y="191" fill="#f0883e">Stack:</text>
+  <text x="230" y="191" fill="#c9d1d9">Java · Spring Boot · Node.js · FastAPI</text>
+
+  <text x="55" y="223" fill="#f0883e">Databases:</text>
+  <text x="230" y="223" fill="#c9d1d9">PostgreSQL · MongoDB · MySQL · Redis</text>
+
+  <text x="55" y="255" fill="#f0883e">Learning:</text>
+  <text x="230" y="255" fill="#c9d1d9">MCP · RAG · Multi-Agent Systems</text>
+
+  <text x="55" y="302" fill="#8b949e">─ Contact ───────────────────────────────────────────────────────────────────────────────</text>
+
+  <text x="55" y="338" fill="#f0883e">Portfolio:</text>
+  <text x="230" y="338" fill="#c9d1d9">arsh.engineer</text>
+
+  <text x="55" y="370" fill="#f0883e">Email:</text>
+  <text x="230" y="370" fill="#c9d1d9">arshth134@gmail.com</text>
+
+  <text x="55" y="402" fill="#f0883e">LinkedIn:</text>
+  <text x="230" y="402" fill="#c9d1d9">linkedin.com/in/arsh342</text>
+
+  <text x="55" y="434" fill="#f0883e">GitHub:</text>
+  <text x="230" y="434" fill="#c9d1d9">github.com/arsh342</text>
+
+  <text x="55" y="481" fill="#8b949e">─ GitHub Stats ─────────────────────────────────────────────────────────────────────────</text>
+
+  <text x="55" y="518" fill="#f0883e">Repos:</text>
+  <text x="145" y="518" fill="#58a6ff">{REPOS}</text>
+  <text x="285" y="518" fill="#f0883e">Contributed:</text>
+  <text x="425" y="518" fill="#58a6ff">{CONTRIBUTED}</text>
+  <text x="565" y="518" fill="#f0883e">Stars:</text>
+  <text x="650" y="518" fill="#58a6ff">{STARS}</text>
+  <text x="790" y="518" fill="#f0883e">Followers:</text>
+  <text x="925" y="518" fill="#58a6ff">{FOLLOWERS}</text>
+
+  <text x="55" y="554" fill="#f0883e">Commits:</text>
+  <text x="145" y="554" fill="#58a6ff">{COMMITS}</text>
+  <text x="285" y="554" fill="#f0883e">Contributions:</text>
+  <text x="425" y="554" fill="#58a6ff">{CONTRIBUTIONS}</text>
+
+  <text x="55" y="590" fill="#f0883e">Lines Changed:</text>
+  <text x="230" y="590" fill="#58a6ff">{LOC}</text>
+  <text x="55" y="626" fill="#8b949e">Account age: {UPTIME}</text>
+</g>
 </svg>
