@@ -60,9 +60,10 @@ def github_graphql(query=GRAPHQL, variables=None):
         result = json.load(response)
 
     if "errors" in result:
-        raise RuntimeError(result["errors"])
+        messages = "; ".join(error.get("message", "Unknown GraphQL error") for error in result["errors"])
+        raise RuntimeError(f"GitHub GraphQL error: {messages}")
 
-    return result["data"]["user"]
+    return result["data"]
 
 
 def years_months_days(created_at):
@@ -128,11 +129,12 @@ def repository_loc(owner, repo):
             query,
             {"owner": owner, "repo": repo, "cursor": cursor},
         )
-        history = (
-            data["repository"]["defaultBranchRef"]["target"]["history"]
-            if data["repository"]["defaultBranchRef"]
-            else None
-        )
+        repository = data.get("repository")
+        if not repository or not repository.get("defaultBranchRef"):
+            break
+
+        target = repository["defaultBranchRef"].get("target")
+        history = target.get("history") if target else None
         if not history:
             break
 
@@ -151,7 +153,8 @@ def repository_loc(owner, repo):
 
 
 def main():
-    user = github_graphql()
+    data = github_graphql()
+    user = data["user"]
     repos = user["repositories"]["nodes"]
 
     stars = sum(repo["stargazerCount"] for repo in repos)
@@ -168,10 +171,7 @@ def main():
     # This mirrors the reference project's LOC concept.
     loc = 0
     for repo in repos:
-        owner, name = repo["nameWithOwner"].split("/", 1) if "nameWithOwner" in repo else (USERNAME, "")
-        # nameWithOwner is not requested above; fall back to repository node name.
-        if not name:
-            owner, name = USERNAME, repo["name"]
+        owner, name = repo["nameWithOwner"].split("/", 1)
         loc += repository_loc(owner, name)
 
     values = {
