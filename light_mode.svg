@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" rx="18" fill="#f6f8fa"/>
+<g font-family="SFMono-Regular,Consolas,Liberation Mono,monospace" font-size="18">
+
+  <text x="55" y="58" fill="#57606a">arsh342</text>
+  <text x="180" y="58" fill="#afb8c1">────────────────────────────────────────────────────────────────────────────────────────────────────────</text>
+
+  <text x="55" y="98" fill="#bc4c00">Education:</text>
+  <text x="235" y="98" fill="#24292f">B.Tech Computer Science · 2027</text>
+
+  <text x="55" y="130" fill="#bc4c00">Role:</text>
+  <text x="235" y="130" fill="#24292f">Backend / Full-Stack Engineer</text>
+
+  <text x="55" y="162" fill="#bc4c00">Languages:</text>
+  <text x="235" y="162" fill="#24292f">Java · Python · TypeScript · JavaScript · C · C++</text>
+
+  <text x="55" y="194" fill="#bc4c00">Backend:</text>
+  <text x="235" y="194" fill="#24292f">Spring Boot · Node.js · Express · FastAPI · REST API</text>
+
+  <text x="55" y="226" fill="#bc4c00">Frontend:</text>
+  <text x="235" y="226" fill="#24292f">Next.js · React · React Native · Tailwind CSS</text>
+
+  <text x="55" y="258" fill="#bc4c00">AI:</text>
+  <text x="235" y="258" fill="#24292f">LLMs · RAG · Agents · MCP</text>
+
+  <text x="55" y="290" fill="#bc4c00">Databases:</text>
+  <text x="235" y="290" fill="#24292f">PostgreSQL · MongoDB · MySQL · Redis · Firebase · Supabase</text>
+
+  <text x="55" y="322" fill="#bc4c00">Learning:</text>
+  <text x="235" y="322" fill="#24292f">MCP · RAG · Multi-Agent Systems</text>
+
+  <text x="55" y="370" fill="#57606a">─ Contact ───────────────────────────────────────────────────────────────────────────────────────────────</text>
+
+  <text x="55" y="406" fill="#bc4c00">Portfolio:</text>
+  <text x="235" y="406" fill="#24292f">arsh.engineer</text>
+
+  <text x="55" y="438" fill="#bc4c00">Email:</text>
+  <text x="235" y="438" fill="#24292f">arshth134@gmail.com</text>
+
+  <text x="55" y="470" fill="#bc4c00">LinkedIn:</text>
+  <text x="235" y="470" fill="#24292f">linkedin.com/in/arsh342</text>
+
+  <text x="55" y="502" fill="#bc4c00">GitHub:</text>
+  <text x="235" y="502" fill="#24292f">github.com/arsh342</text>
+
+  <text x="55" y="550" fill="#57606a">─ GitHub Stats ───────────────────────────────────────────────────────────────────────────────────────────</text>
+
+  <text x="55" y="588" fill="#bc4c00">Repos:</text>
+  <text x="145" y="588" fill="#0969da">24</text>
+
+  <text x="300" y="588" fill="#bc4c00">Contributed:</text>
+  <text x="440" y="588" fill="#0969da">19</text>
+
+  <text x="600" y="588" fill="#bc4c00">Stars:</text>
+  <text x="690" y="588" fill="#0969da">615</text>
+
+  <text x="825" y="588" fill="#bc4c00">Followers:</text>
+  <text x="960" y="588" fill="#0969da">14</text>
+
+  <text x="55" y="624" fill="#bc4c00">Commits:</text>
+  <text x="145" y="624" fill="#0969da">375</text>
+
+</g>
+</svg>
