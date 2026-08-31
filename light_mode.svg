@@ -49,7 +49,7 @@
   <text x="145" y="588" fill="#0969da">25</text>
 
   <text x="300" y="588" fill="#bc4c00">Contributed:</text>
-  <text x="440" y="588" fill="#0969da">20</text>
+  <text x="440" y="588" fill="#0969da">18</text>
 
   <text x="600" y="588" fill="#bc4c00">Stars:</text>
   <text x="690" y="588" fill="#0969da">622</text>
@@ -58,7 +58,7 @@
   <text x="960" y="588" fill="#0969da">14</text>
 
   <text x="55" y="624" fill="#bc4c00">Commits:</text>
-  <text x="145" y="624" fill="#0969da">391</text>
+  <text x="145" y="624" fill="#0969da">392</text>
 
 </g>
 </svg>
