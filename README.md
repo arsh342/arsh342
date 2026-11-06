@@ -2,11 +2,6 @@
 
 Just a guy creating things, learning as I go, and trying to make software that feels great to use.
 
-## Fun Facts
-
-- I build Mac apps and Blender add-ons, because picking one thing is hard
-- I'm building a VM manager for the Mac in Swift and C
-
 ## Things I Made
 
 - [openVM](https://github.com/arsh342/openvm): run Windows and Linux on your Apple Silicon Mac, connected to macOS
